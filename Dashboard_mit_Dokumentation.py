@@ -200,7 +200,7 @@ class DashboardUI:
 
     def maske_kurs_hinzufuegen(self) -> None:
         """Eingabemaske für das Hinzufügen eines neuen Kurses."""
-        self.console.print("\n[bold green]--- Neuen Kurs anlegen ---[/bold blue]")
+        self.console.print("\n[bold blue]--- Neuen Kurs anlegen ---[/bold blue]")
         name = self.console.input("Kursname: ").strip()
         if not name: return
         ects_in = self.console.input("ECTS-Punkte: ").strip()
@@ -211,7 +211,7 @@ class DashboardUI:
     def maske_kurs_bestehen(self, offene: List[Kurs]) -> None:
         """Eingabemaske für das HInzufügen einer Note."""
         if not offene: return
-        self.console.print("\n[bold blue]--- Kurs als bestanden markieren ---[/bold green]")
+        self.console.print("\n[bold green]--- Kurs als bestanden markieren ---[/bold green]")
         idx_in = self.console.input("Gib die ID des Kurses ein: ").strip()
         if not idx_in.isdigit(): return
         idx = int(idx_in) - 1
